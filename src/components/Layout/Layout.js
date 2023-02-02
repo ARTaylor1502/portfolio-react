@@ -21,16 +21,25 @@ const Layout = () => (
       <div className="mx-auto container">
         <div className="flex justify-center">
           <a href="http://uk.linkedin.com/in/artaylorwebdesign" target="_blank">
-            <i className="m-6 text-4xl fa fa-linkedin" aria-hidden="true"></i>
+            <i
+              className="m-6 text-4xl fa fa-linkedin text-primary-light"
+              aria-hidden="true"
+            ></i>
           </a>
           <a
             href="mailto:artaylor1502@gmail.com?Subject=ARTaylorWebDevelopment%20Query"
             target="_blank"
           >
-            <i className="m-6 text-4xl fa fa-envelope" aria-hidden="true"></i>
+            <i
+              className="m-6 text-4xl fa fa-envelope text-primary-light"
+              aria-hidden="true"
+            ></i>
           </a>
           <a href="https://github.com/ARTaylor1502" target="_blank">
-            <i className="m-6 text-4xl fa fa-github" aria-hidden="true"></i>
+            <i
+              className="m-6 text-4xl fa fa-github text-primary-light"
+              aria-hidden="true"
+            ></i>
           </a>
         </div>
         <p className="mx-auto text-center">
