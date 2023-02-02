@@ -2,19 +2,19 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => (
-  <div className="flex flex-col h-screen leading-8">
-    <header className="p-6 lg:py-12">
-      <div className="mx-auto container flex">
+  <div className="flex flex-col h-screen">
+    <header className="px-6 py-12 lg:py-12">
+      <div className="mx-auto container flex justify-evenly">
         <a href="/">
           <img
-            className="w-100 h-28 lg:w-80"
+            className="w-full lg:w-80"
             src="logo.svg"
             alt="ARTaylor Web Development"
           />
         </a>
       </div>
     </header>
-    <main className="mx-auto mb-auto px-6 lg:py-12 lg:px-6 container grow">
+    <main className="mx-auto mb-auto px-6 sm:px-0 container grow">
       <Outlet />
     </main>
     <footer className="p-6 pt-0 lg:py-6">
