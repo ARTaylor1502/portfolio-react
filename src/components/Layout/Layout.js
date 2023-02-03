@@ -10,15 +10,15 @@ function Layout() {
   return (
     <div className="flex flex-col h-screen">
       <header className="px-6 py-12 lg:py-12">
-        <div className="mx-auto container flex justify-between">
+        <div className="mx-auto container md:flex justify-between">
           <a href="/">
             <img
-              className="w-full lg:w-80"
+              className="h-28 w-full md:w-48"
               src="logo.svg"
               alt="ARTaylor Web Development"
             />
           </a>
-          <nav className="flex">
+          <nav className="hidden sm:flex sm:justify-center sm:items-center">
             <NavigationMenu />
           </nav>
         </div>
