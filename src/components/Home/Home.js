@@ -30,11 +30,7 @@ const Home = () => (
       </div>
     </div>
     <div>
-      <img
-        className="my-12 p-12 mx-auto w-100 md:w-6/12"
-        src="desk.svg"
-        alt="Desk"
-      />
+      <img className="p-12 mx-auto w-100 md:w-6/12" src="desk.svg" alt="Desk" />
     </div>
   </div>
 );

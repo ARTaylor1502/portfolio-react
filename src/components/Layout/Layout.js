@@ -2,14 +2,14 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import NavigationMenu from "../NavigationMenu/NavigationMenu";
 
-function Layout() {
+function Layout({ navItems }) {
   function getCurrentYear() {
     return new Date().getFullYear();
   }
 
   return (
     <div className="flex flex-col h-screen">
-      <header className="px-6 py-12 lg:py-12">
+      <header className="p-6 lg:py-12">
         <div className="mx-auto container md:flex justify-between">
           <a href="/">
             <img
@@ -19,7 +19,7 @@ function Layout() {
             />
           </a>
           <nav className="hidden sm:flex sm:justify-center sm:items-center">
-            <NavigationMenu />
+            <NavigationMenu menuItems={navItems} />
           </nav>
         </div>
       </header>
