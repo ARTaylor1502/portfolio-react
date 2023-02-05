@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "primary-light": "#FBB040",
+        "secondary-light": "#f6980d",
         "primary-dark": "#000",
       },
       container: {
@@ -19,6 +20,9 @@ module.exports = {
         sans: ["Coves Light", "sans-serif"],
       },
       fontSize: "1.8rem",
+      boxShadow: {
+        xl: "0px 0px 40px 0px rgba(0,0,0,0.75)",
+      },
     },
   },
   plugins: [],

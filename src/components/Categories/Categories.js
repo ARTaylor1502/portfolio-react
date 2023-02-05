@@ -52,22 +52,18 @@ const Categories = () => {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-8">
+    <div className="grid grid-cols-2 gap-16">
       {categoryPages.map((page) => (
         <Link
           to={`/pages/${page.sys.id}`}
-          className="text-2xl text-primary-light hover:text-primary-dark"
+          className="text-2xl text-primary-light hover:text-primary-dark hover:shadow-xl hover:shadow-secondary-light"
           key={`page-${page.sys.id}`}
         >
-          <div className="border border-primary-dark">
-            <div className="h-80 p-5 flex justify-center items-center">
-              <img
-                className="h-fit"
-                src={page.bannerImage.url}
-                alt={page.bannerImage.title}
-              />
-            </div>
-            <h3 className="p-3">{page.title}</h3>
+          <div
+            style={{ backgroundImage: `url('${page.bannerImage.url}')` }}
+            className="h-80 flex items-end bg-cover bg-center bg-no-repeat"
+          >
+            <h3 className="p-3 bg-white">{page.title}</h3>
           </div>
         </Link>
       ))}
