@@ -52,7 +52,7 @@ const Page = () => {
 
   return (
     <div>
-      <h1 className="mb-6 lg:mb-0 lg:py-6 text-2xl font-semibold">
+      <h1 className="mb-6 lg:mb-0 lg:py-6 text-3xl font-semibold">
         {page.title}
       </h1>
       <img
@@ -60,33 +60,33 @@ const Page = () => {
         src={page.bannerImage.url}
         alt={page.bannerImage.title}
       />
-      <div>
+      <div className="text-lg">
         {page.briefclientRequirements && (
           <>
-            <h2 className="mb-5 text-xl font-semibold">
+            <h2 className="mb-8 text-2xl font-semibold">
               Brief/Client Requirements
             </h2>
-            <div className="mb-5">
+            <div className="mb-8">
               {HTMLReactParser(page.briefclientRequirements)}
             </div>
           </>
         )}
         {page.techUsed && (
           <>
-            <h2 className="mb-5 text-xl font-semibold">Tech Used</h2>
-            <div className="mb-5">{HTMLReactParser(page.techUsed)}</div>
+            <h2 className="mb-8 text-2xl font-semibold">Tech Used</h2>
+            <div className="mb-8">{HTMLReactParser(page.techUsed)}</div>
           </>
         )}
         {page.development && (
           <>
-            <h2 className="mb-5 text-xl font-semibold">Development</h2>
-            <div className="mb-5">{HTMLReactParser(page.development)}</div>
+            <h2 className="mb-8 text-2xl font-semibold">Development</h2>
+            <div className="mb-8">{HTMLReactParser(page.development)}</div>
           </>
         )}
         {page.projectOutcome && (
           <>
-            <h2 className="mb-5 text-xl font-semibold">Project Outcome</h2>
-            <div className="mb-5">{HTMLReactParser(page.projectOutcome)}</div>
+            <h2 className="mb-8 text-2xl font-semibold">Project Outcome</h2>
+            <div className="mb-8">{HTMLReactParser(page.projectOutcome)}</div>
           </>
         )}
       </div>
