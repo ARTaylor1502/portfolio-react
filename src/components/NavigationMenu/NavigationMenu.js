@@ -1,16 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NavigationMenu({ menuItems }) {
   return (
     <>
       {menuItems.map((menuItem) => (
-        <a
+        <Link
+          to={`categories/${menuItem.category}`}
           className="px-4 text-2xl text-primary-light hover:text-black"
-          href="/"
           key={`menu-item-${menuItem.category}`}
         >
           {menuItem.category}
-        </a>
+        </Link>
       ))}
     </>
   );
