@@ -35,7 +35,7 @@ function Layout({ navItems }) {
               rel="noreferrer"
             >
               <i
-                className="m-6 text-4xl fa fa-linkedin text-primary-light"
+                className="m-6 text-4xl fa fa-linkedin text-primary-light hover:text-primary-dark"
                 aria-hidden="true"
               ></i>
             </a>
@@ -45,7 +45,7 @@ function Layout({ navItems }) {
               rel="noreferrer"
             >
               <i
-                className="m-6 text-4xl fa fa-envelope text-primary-light"
+                className="m-6 text-4xl fa fa-envelope text-primary-light hover:text-primary-dark"
                 aria-hidden="true"
               ></i>
             </a>
@@ -55,7 +55,7 @@ function Layout({ navItems }) {
               rel="noreferrer"
             >
               <i
-                className="m-6 text-4xl fa fa-github text-primary-light"
+                className="m-6 text-4xl fa fa-github text-primary-light hover:text-primary-dark"
                 aria-hidden="true"
               ></i>
             </a>

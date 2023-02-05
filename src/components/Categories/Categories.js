@@ -56,10 +56,10 @@ const Categories = () => {
       {categoryPages.map((page) => (
         <Link
           to={`/pages/${page.sys.id}`}
-          className="text-2xl text-primary-light hover:text-black"
+          className="text-2xl text-primary-light hover:text-primary-dark"
           key={`page-${page.sys.id}`}
         >
-          <div className="border border-black">
+          <div className="border border-primary-dark">
             <div className="h-80 p-5 flex justify-center items-center">
               <img
                 className="h-fit"

@@ -9,8 +9,8 @@ function NavigationMenu({ menuItems }) {
           to={`/categories/${menuItem.category}`}
           className={({ isActive }) =>
             isActive
-              ? "px-4 text-2xl text-black hover:text-primary-light underline"
-              : "px-4 text-2xl text-primary-light hover:text-black"
+              ? "px-4 text-2xl text-primary-dark hover:text-primary-light underline"
+              : "px-4 text-2xl text-primary-light hover:text-primary-dark"
           }
           key={`menu-item-${menuItem.category}`}
         >
