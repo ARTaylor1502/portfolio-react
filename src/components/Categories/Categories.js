@@ -55,7 +55,7 @@ const Categories = () => {
     <div className="grid grid-cols-2 gap-8">
       {categoryPages.map((page) => (
         <Link
-          to={`pages/${page.sys.id}`}
+          to={`/pages/${page.sys.id}`}
           className="text-2xl text-primary-light hover:text-black"
           key={`page-${page.sys.id}`}
         >

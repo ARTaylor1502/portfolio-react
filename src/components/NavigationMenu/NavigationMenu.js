@@ -6,7 +6,7 @@ function NavigationMenu({ menuItems }) {
     <>
       {menuItems.map((menuItem) => (
         <Link
-          to={`categories/${menuItem.category}`}
+          to={`/categories/${menuItem.category}`}
           className="px-4 text-2xl text-primary-light hover:text-black"
           key={`menu-item-${menuItem.category}`}
         >

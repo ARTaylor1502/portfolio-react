@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Layout from "./components/Layout/Layout";
 import Categories from "./components/Categories/Categories";
+import Page from "./components/Page/Page";
 
 const query = `
 {
@@ -49,6 +50,7 @@ function App() {
       <Route path="/" element={<Layout navItems={navItems} />}>
         <Route index element={<Home />} />
         <Route path="/categories/:categoryId" element={<Categories />} />
+        <Route path="/pages/:pageId" element={<Page />} />
       </Route>
     </Routes>
   );

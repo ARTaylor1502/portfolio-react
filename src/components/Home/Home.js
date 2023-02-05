@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => (
   <div>
-    <h2 className="mb-6 lg:mb-0 lg:py-6 text-2xl font-semibold">Welcome!</h2>
+    <h1 className="mb-6 lg:mb-0 lg:py-6 text-2xl font-semibold">Welcome!</h1>
     <div className="grid rid-cols-1 md:grid-cols-3">
       <div className="mb-6 md:mb-0 md:pr-6 text-justify">
         <p className="text-lg leading-loose">

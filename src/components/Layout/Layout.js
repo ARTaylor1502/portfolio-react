@@ -14,7 +14,7 @@ function Layout({ navItems }) {
           <a href="/">
             <img
               className="h-28 w-full md:w-48"
-              src="logo.svg"
+              src="/logo.svg"
               alt="ARTaylor Web Development"
             />
           </a>
