@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         "primary-light": "#FBB040",
         "secondary-light": "#f6980d",
+        "alternate-light": "#fff",
         "primary-dark": "#000",
       },
       container: {
