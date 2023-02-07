@@ -52,7 +52,7 @@ const Categories = () => {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-16">
+    <div className="grid md:grid-cols-2 gap-16">
       {categoryPages.map((page) => (
         <Link
           to={`/pages/${page.sys.id}`}
