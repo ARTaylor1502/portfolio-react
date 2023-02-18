@@ -558,3 +558,90 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+
+.cube {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: rotateX(345deg) rotateY(334deg) rotateZ(360deg);
+}
+
+.shake {
+  animation: shake 3.5s ease 2s infinite normal;
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: rotateX(345deg) rotateY(334deg) rotateZ(360deg);
+	}
+
+  2%, 6% {
+    transform: rotateX(345deg) rotateY(334deg) rotateZ(350deg);
+  }
+
+  4%, 8% {
+		transform: rotateX(345deg) rotateY(334deg) rotateZ(370deg);
+	}
+
+  10% {
+		transform: rotateX(345deg) rotateY(334deg) rotateZ(360deg);
+	}
+}
+
+.cube .face {
+  position: absolute;
+}
+
+.cube .-front {
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%) rotateY(0deg) translateZ(75px);
+  background: rgba(168, 94, -1, 1);
+}
+
+.cube .-left {
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%) rotateY(90deg) translateZ(75px);
+  background: rgba(123, 49, -46, 1);
+}
+
+@keyframes popBoxTop {
+	100% {
+    transform: translate(-50%, -50%) rotateX(90deg) translateZ(9999px);
+	}
+}
+
+.cube .-top {
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%) rotateX(90deg) translateZ(75px);
+  background: rgba(173, 99, 4, 1);
+}
+
+.pop-top {
+  animation: popBoxTop 2s ease 0s 1 normal forwards;
+}
+
+.cube .-bottom {
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%) rotateX(-90deg) translateZ(75px);
+  background: rgba(73, -1, -96, 1);
+}
+
+.cube .-right {
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%) rotateY(-90deg) translateZ(75px);
+  background: rgba(123, 49, -46, 1);
+}
+
+.cube .-back {
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%) rotateY(180deg) translateZ(75px);
+  background: rgba(98, 24, -71, 1);
+}
