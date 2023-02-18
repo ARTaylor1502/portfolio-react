@@ -3,7 +3,7 @@ import Canvas from "../Canvas/Canvas";
 
 const Home = () => {
   const [ballsActive, setBallsActive] = useState(false);
-  const boxRef = useRef();
+  const boxPlaceholderRef = useRef();
 
   const toggleBallsActive = () => {
     setBallsActive((current) => !current);
@@ -43,9 +43,8 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="h-80 relative">
+        <div ref={boxPlaceholderRef} className="h-80 relative">
           <div
-            ref={boxRef}
             className={`cube cursor-pointer${ballsActive ? "" : " shake"}`}
             onClick={() => toggleBallsActive()}
           >
@@ -62,8 +61,8 @@ const Home = () => {
       </div>
       {ballsActive && (
         <Canvas
-          ballsStartX={boxRef.current.offsetLeft}
-          ballsStartY={boxRef.current.offsetTop - 60}
+          ballsStartX={window.innerWidth / 2}
+          ballsStartY={boxPlaceholderRef.current.offsetHeight * 1.75}
         />
       )}
     </div>
