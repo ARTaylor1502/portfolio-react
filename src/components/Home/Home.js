@@ -43,28 +43,22 @@ const Home = () => {
             </p>
           </div>
         </div>
-
-        <div
-          ref={boxRef}
-          className={`hidden md:block cube cursor-pointer${
-            ballsActive ? "" : " shake"
-          }`}
-          onClick={() => toggleBallsActive()}
-        >
-          <div className="z-30 face -front flex items-center justify-center text-6xl">
-            <span>?</span>
+        <div className="h-80 relative">
+          <div
+            ref={boxRef}
+            className={`cube cursor-pointer${ballsActive ? "" : " shake"}`}
+            onClick={() => toggleBallsActive()}
+          >
+            <div className="z-30 face -front flex items-center justify-center text-6xl">
+              <span>?</span>
+            </div>
+            <div className="z-30 face -left"></div>
+            <div className={`face -top${ballsActive ? " pop-top" : ""}`}></div>
+            <div className="face -bottom"></div>
+            <div className="z-10 face -right"></div>
+            <div className="z-10 face -back"></div>
           </div>
-          <div className="z-30 face -left"></div>
-          <div className={`face -top${ballsActive ? " pop-top" : ""}`}></div>
-          <div className="face -bottom"></div>
-          <div className="z-10 face -right"></div>
-          <div className="z-10 face -back"></div>
         </div>
-        <img
-          src="desk.svg"
-          alt="Desk"
-          className="p-12 mx-auto w-100 md:hidden"
-        />
       </div>
       {ballsActive && (
         <Canvas

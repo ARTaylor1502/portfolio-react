@@ -561,8 +561,8 @@ video {
 
 .cube {
   position: absolute;
-  top: 70%;
   left: 50%;
+  top: 10rem;
   transform-style: preserve-3d;
   transform: rotateX(345deg) rotateY(334deg) rotateZ(360deg);
 }
