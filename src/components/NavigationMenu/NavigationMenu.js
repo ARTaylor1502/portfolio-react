@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
 function NavigationMenu({ menuItems }) {
@@ -20,5 +21,9 @@ function NavigationMenu({ menuItems }) {
     </div>
   );
 }
+
+NavigationMenu.propTypes = {
+  menuItems: PropTypes.array,
+};
 
 export default NavigationMenu;

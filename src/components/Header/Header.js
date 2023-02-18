@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import NavigationMenu from "../NavigationMenu/NavigationMenu";
 import MobileNavigationMenu from "../MobileNavigationMenu/MobileNavigationMenu";
 
@@ -35,6 +36,10 @@ const Header = ({ navItems }) => {
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  navItems: PropTypes.array,
 };
 
 export default Header;

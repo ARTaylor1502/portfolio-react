@@ -149,8 +149,9 @@ const Canvas = ({ ballsStartX, ballsStartY }) => {
   );
 };
 
-Canvas.propTypes = {};
-
-Canvas.defaultProps = {};
+Canvas.propTypes = {
+  ballsStartX: PropTypes.number,
+  ballsStartY: PropTypes.number,
+};
 
 export default Canvas;
