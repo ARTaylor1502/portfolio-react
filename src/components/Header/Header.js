@@ -11,7 +11,7 @@ const Header = ({ navItems }) => {
   }
 
   return (
-    <header className="z-50 p-6 lg:py-12">
+    <header className="p-6 lg:py-12">
       <div className="mx-auto container md:flex justify-between">
         <i
           className="sm:hidden text-4xl fa fa-bars cursor-pointer"

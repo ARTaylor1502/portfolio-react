@@ -44,7 +44,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div ref={boxPlaceholderRef} className="h-80 relative">
+        <div ref={boxPlaceholderRef} className="z-10 h-80 relative">
           <div
             className={`cube cursor-pointer${ballsActive ? "" : " shake"}`}
             onClick={(e) => {
