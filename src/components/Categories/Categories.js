@@ -1,54 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
+import { categoryPagesQuery } from "../../gql/categoryPages";
 
 const Categories = () => {
   let { categoryId } = useParams();
-  const [categoryPages, setCategoryPages] = useState([]);
 
-  const query = `
-  {
-    portfolioPageCollection(where: {category: {category: "${categoryId}"}}) {
-      items {
-        sys {
-          id
-        }
-        title
-        bannerImage {
-          url
-          title
-        }
-      }
-    }
-  }
-  `;
+  const { data, loading } = useFetch(
+    `https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_CONTENTFUL_SPACE_ID}/`,
+    categoryPagesQuery(categoryId)
+  );
 
-  useEffect(() => {
-    window
-      .fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_CONTENTFUL_SPACE_ID}/`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN}`,
-          },
-          body: JSON.stringify({ query }),
-        }
-      )
-      .then((response) => response.json())
-      .then(({ data, errors }) => {
-        if (errors) {
-          console.error(errors);
-        }
-
-        setCategoryPages(data.portfolioPageCollection.items);
-      });
-  }, [categoryId]);
-
-  if (!categoryPages) {
+  if (loading) {
     return "Loading...";
   }
+
+  const categoryPages = data.portfolioPageCollection.items;
 
   return (
     <div className="grid md:grid-cols-2 gap-16">

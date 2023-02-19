@@ -1,53 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import HTMLReactParser from "html-react-parser";
+import useFetch from "../../hooks/useFetch";
+import { portfolioQuery } from "../../gql/portfolioPage";
 
 const Page = () => {
   let { pageId } = useParams();
-  const [page, setPage] = useState(null);
+  const { data, loading } = useFetch(
+    `https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_CONTENTFUL_SPACE_ID}/`,
+    portfolioQuery(pageId)
+  );
 
-  const query = `
-  {
-    portfolioPage(id: "${pageId}") {
-       title
-      bannerImage {
-        url
-        title
-      }
-      briefclientRequirements
-      techUsed
-      development
-      projectOutcome
-    }
-  }
-  `;
-
-  useEffect(() => {
-    window
-      .fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_CONTENTFUL_SPACE_ID}/`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN}`,
-          },
-          body: JSON.stringify({ query }),
-        }
-      )
-      .then((response) => response.json())
-      .then(({ data, errors }) => {
-        if (errors) {
-          console.error(errors);
-        }
-
-        setPage(data.portfolioPage);
-      });
-  }, [pageId]);
-
-  if (!page) {
+  if (loading) {
     return "Loading...";
   }
+
+  let page = data.portfolioPage;
 
   return (
     <div>
