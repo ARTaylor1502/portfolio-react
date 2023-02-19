@@ -625,6 +625,13 @@ video {
 	}
 }
 
+@-webkit-keyframes popBoxTop {
+	100% {
+    -webkit-transform: translate(-50%, -50%) rotateX(90deg) translateZ(9999px);
+    transform: translate(-50%, -50%) rotateX(90deg) translateZ(9999px);
+	}
+}
+
 .cube .-top {
   width: 150px;
   height: 150px;
