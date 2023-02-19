@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="z-20">
+      <div>
         <h1 className="mb-6 lg:mb-0 lg:py-6 text-2xl font-semibold">
           Welcome!
         </h1>
@@ -52,14 +52,14 @@ const Home = () => {
               setBallsStartCoordinates({ x: e.clientX, y: e.clientY });
             }}
           >
-            <div className="z-30 face -front flex items-center justify-center text-6xl">
+            <div className="face -front flex items-center justify-center text-6xl">
               <span>?</span>
             </div>
-            <div className="z-30 face -left"></div>
+            <div className="face -left"></div>
             <div className={`face -top${ballsActive ? " pop-top" : ""}`}></div>
             <div className="face -bottom"></div>
-            <div className="z-10 face -right"></div>
-            <div className="z-10 face -back"></div>
+            <div className="face -right"></div>
+            <div className="face -back"></div>
           </div>
         </div>
       </div>
