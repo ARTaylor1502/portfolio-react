@@ -5,7 +5,7 @@ import { faWindowClose } from "@fortawesome/free-regular-svg-icons";
 
 const MobileNavigationMenu = ({ menuItems, setMobileNavActive }) => {
   return (
-    <div className="h-screen w-screen fixed left-0 top-0">
+    <div className="z-50 h-screen w-screen fixed left-0 top-0">
       <div className="h-screen w-screen fixed left-0 top-0 bg-primary-dark opacity-80"></div>
       <FontAwesomeIcon
         icon={faWindowClose}
