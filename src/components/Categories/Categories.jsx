@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { categoryPagesQuery } from "../../gql/categoryPages";
+import Loading from "../../components/Loading/Loading";
 
 const Categories = () => {
   let { categoryId } = useParams();
@@ -13,7 +14,7 @@ const Categories = () => {
   );
 
   if (loading) {
-    return "Loading...";
+    return <Loading />;
   }
 
   const categoryPages = data.portfolioPageCollection.items;

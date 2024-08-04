@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import HTMLReactParser from "html-react-parser";
 import useFetch from "../../hooks/useFetch";
 import { portfolioQuery } from "../../gql/portfolioPage";
+import Loading from  "../../components/Loading/Loading";
+
 
 const Page = () => {
   let { pageId } = useParams();
@@ -12,7 +14,7 @@ const Page = () => {
   );
 
   if (loading) {
-    return "Loading...";
+    return <Loading />;
   }
 
   let page = data.portfolioPage;

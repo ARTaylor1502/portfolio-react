@@ -5,6 +5,7 @@ import Categories from "./components/Categories/Categories";
 import Page from "./components/Page/Page";
 import { categoriesQuery } from "./gql/categories";
 import useFetch from "./hooks/useFetch";
+import Loading from  "./components/Loading/Loading";
 
 function App() {
   const { data, loading } = useFetch(
@@ -13,7 +14,7 @@ function App() {
   );
 
   if (loading) {
-    return "Loading...";
+    return <Loading />;
   }
 
   const navItems = data.categoriesCollection.items;
