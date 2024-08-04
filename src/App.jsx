@@ -8,7 +8,7 @@ import useFetch from "./hooks/useFetch";
 
 function App() {
   const { data, loading } = useFetch(
-    `https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_CONTENTFUL_SPACE_ID}/`,
+    `https://graphql.contentful.com/content/v1/spaces/${import.meta.env.VITE_CONTENTFUL_SPACE_ID}/`,
     categoriesQuery
   );
 

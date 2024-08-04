@@ -7,7 +7,7 @@ import { portfolioQuery } from "../../gql/portfolioPage";
 const Page = () => {
   let { pageId } = useParams();
   const { data, loading } = useFetch(
-    `https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_CONTENTFUL_SPACE_ID}/`,
+    `https://graphql.contentful.com/content/v1/spaces/${import.meta.env.VITE_CONTENTFUL_SPACE_ID}/`,
     portfolioQuery(pageId)
   );
 
